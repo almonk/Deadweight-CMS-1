@@ -1,0 +1,22 @@
+Deadweight private beta 0.1
+---------------------------
+
+Installation instructions;
+
+1. Upload all the files to wherever you want
+2. Rename htaccess to .htaccess
+3. Go to app/application/config/config.php and change the base_url to whatever you're using
+4. Go to the root of your Deadweight site, everything should be working normally
+
+When you're ready to deploy your website make sure you go to app/application/config/parser.php and give a cache time for your templates otherwise there's gonna be some heavylifting going on on your server.
+
+
+Known issues:
+
+- htaccess is a fickle beast so you might have to lookup how your host likes to have the file formatted
+
+- If you get a 404 error after installing try changing the value '$config['uri_protocol']= "AUTO";' in config.php
+
+- If you have loads of problems with htaccess you can disable the clean urls by deleting the htaccess file altogether and adding in the relevant field in the config.php
+
+- Complete relative path needs to be used to include templates within templates at the moment
